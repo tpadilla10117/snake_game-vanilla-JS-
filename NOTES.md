@@ -10,3 +10,7 @@ This pattern decouples progression of game time from user input and processor sp
 - Real World Definition: Game loop is the main process of all the game rendering threads. It's present in all modern games. It drives input process, internal status update, rendering, AI and all the other processes.
 
 - Plain Words: Game Loop pattern ensures that game time progresses in equal speed in all different hardware setups.
+
+References:
+
+- requestAnimationFrame() : [https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame]

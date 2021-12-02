@@ -33,9 +33,9 @@
     export function draw(gameBoard) {
         /* console.log("draw snake"); */
 
-        /* Loop through each portion of the snake - called 'segment' */
+        /* Loop through each portion of the snake - called 'segment', and create new segments: */
         snakeBody.forEach(segment => {
-            const snakeElement = document.createElement('div'); //we create a div
+            const snakeElement = document.createElement('div');
             snakeElement.style.gridRowStart = segment.y; //drawing/setting the X and then Y coordinates of the snake
             snakeElement.style.gridColumnStart = segment.x;
             snakeElement.classList.add('snake'); //add the 'snake' class
@@ -70,7 +70,7 @@
     };
 
     function addSegments() {
-        for (let i = 0; i< newSegments; i++) {
+        for (let i = 0; i < newSegments; i++) {
             snakeBody.push( {...snakeBody[snakeBody.length - 1] });
         };
 
