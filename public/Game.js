@@ -4,12 +4,11 @@
 /* import React from "react"; */
 
 
-import './Grid.styles.scss';
-import { SNAKE_SPEED, draw as drawSnake, update as updateSnake, getSnakeHead, snakeIntersection } from './Snake';
+import { SNAKE_SPEED, draw as drawSnake, update as updateSnake, getSnakeHead, snakeIntersection } from './Snake.js';
 import { update as updateFood, draw as drawFood } from './Food.js';
-import { outsideGrid } from './FoodPosition';
+import { outsideGrid } from './FoodPosition.js';
 
-function Grid() {
+
 
     let lastRenderTime = 0;
     let gameOver = false;
@@ -41,6 +40,9 @@ function Grid() {
         draw();
     }
 
+    /* console.log(window.requestAnimationFrame(main)); */
+    window.requestAnimationFrame(main);
+
     function update() {
         updateSnake();
         updateFood();
@@ -58,14 +60,6 @@ function Grid() {
         gameOver = outsideGrid( getSnakeHead() ) || snakeIntersection();
     };
 
-     /* console.log(window.requestAnimationFrame(main)); */
-    /* window.requestAnimationFrame(main); */
+     
 
-    return (
-        <div id="game-board">
-            
-        </div>
-    );
-};
 
-export default Grid;

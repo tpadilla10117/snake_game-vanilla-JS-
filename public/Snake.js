@@ -1,7 +1,7 @@
-import { getInputDirection } from "./Input";
+import { getInputDirection } from "./Input.js";
 
 /* How many times the snake moves per second:  */
-    export const SNAKE_SPEED = 1;
+    export const SNAKE_SPEED = 5;
 
 /* How I represent my Snake, in an X and Y position (here it's middle of screen): */
     const snakeBody = [ { x: 11, y: 11 },
