@@ -1,12 +1,7 @@
-
-//TODO: Implement with React framework
-//TODO: Game WORKS, but it's re-rendering due to the react framework.  Place this into Vanilla Js then re-write with react
-/* import React from "react"; */
-
-
-import { SNAKE_SPEED, draw as drawSnake, update as updateSnake, getSnakeHead, snakeIntersection } from './Snake.js';
-import { update as updateFood, draw as drawFood } from './Food.js';
-import { outsideGrid } from './FoodPosition.js';
+/* THIS COMPONENT RENDERS OUR PRIMARY GAME LOGIC: */
+    import { SNAKE_SPEED, draw as drawSnake, update as updateSnake, getSnakeHead, snakeIntersection } from './Snake.js';
+    import { update as updateFood, draw as drawFood } from './Food.js';
+    import { outsideGrid } from './FoodPosition.js';
 
 
 
@@ -17,7 +12,6 @@ import { outsideGrid } from './FoodPosition.js';
 /* 1) Game Loop: */
     function main(currentTime) {
 
-    //TODO: Check the confirm error:
         if(gameOver) {
             if(window.confirm('You lose.  Press ok to restart.')) {
                 window.location ='/';
@@ -25,7 +19,8 @@ import { outsideGrid } from './FoodPosition.js';
             return
         };
 
-        window.requestAnimationFrame(main);/* browser, tell me when to I can render my next frame.  I start with requesting a frame to animate my game, then I get the timestamp back when that frame is going to render*/
+    /* browser, tell me when to I can render my next frame.  I start with requesting a frame to animate my game, then I get the timestamp back when that frame is going to render :*/
+        window.requestAnimationFrame(main);
 
         const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000; /* convert to second from milliseconds */
 
@@ -40,7 +35,6 @@ import { outsideGrid } from './FoodPosition.js';
         draw();
     }
 
-    /* console.log(window.requestAnimationFrame(main)); */
     window.requestAnimationFrame(main);
 
     function update() {

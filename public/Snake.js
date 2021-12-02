@@ -1,4 +1,6 @@
-import { getInputDirection } from "./Input.js";
+/* LOGIC FOR THE SNAKE ITSELF: */
+    
+    import { getInputDirection } from "./Input.js";
 
 /* How many times the snake moves per second:  */
     export const SNAKE_SPEED = 5;
